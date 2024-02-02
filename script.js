@@ -21,7 +21,7 @@ function initMap() {
             position: userLocation,
             map: map,
             title: 'Your Location',
-            icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+            icon: 'https://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png'
           });
   
           // Geocode the latitude and longitude to get the city name
