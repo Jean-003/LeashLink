@@ -132,9 +132,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 } fetchData ();
-
-=======
-  } else {
-    console.error('Element with ID "searchButton" not found.');
-  }
-});
