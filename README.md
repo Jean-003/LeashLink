@@ -3,7 +3,7 @@
 A website application for Dog owners to search for other local dog owners to organise local dog walking sessions.
 
 Description
-This project is creating a website for local owners to find local family and pet friendly events. With future functionalit to create local walking group events using a google maps API and Ticketmaster Event API. This website utilises html, bootstrap, css styling and javascript to create a coherent and dynamic structure on the webpage.
+This project is creating a website for people to find local family and pet friendly events. With future functionality to create local walking group events and place them into a shared planner using a google maps API and Ticketmaster Event API. This website utilises html, bootstrap, css styling and javascript to create a coherent and dynamic structure on the webpage.
 
 The motivation to build this project is to help gain a better understanding of how to access and utilise third part APIs and to practice creating and styling web pages as part of a dev team. 
 
