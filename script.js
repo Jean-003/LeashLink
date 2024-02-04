@@ -90,7 +90,7 @@ function createMarker(place) {
   });
 }
 
-// Function to fetch data (you can customize this according to your needs)
+// Function to fetch data
 function fetchData() {
   var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=music&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx";
 
