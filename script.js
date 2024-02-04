@@ -1,3 +1,4 @@
+
 // Make map a global variable because it doesn't like it if it isn't
 var map;
 
@@ -103,21 +104,21 @@ function createMarker(place) {
 
 
 function fetchData() {
-  var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=family&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx"
+  var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=music&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx"
 
   
   console.log(queryURL); //log the url
 
 
   fetch(queryURL) 
-    .then(response => response.json()) //access and use data from API
+    .then(response => response.json()) //access and use data 
     .then(data => {  
-      console.log(data); //log the data into console
-      var eventName = data.name;   //access event name property from data (test)
+      console.log(data); //log the data 
+      var eventName = data.name;   //access event name property from data(test)
       console.log(eventName) // log the name 
       data.events.forEach(
         event => {
-          console.log(event.name); // log each relevant event name 
+          console.log(event.name);
         }
       );
       return data; // return the data 
@@ -128,18 +129,7 @@ function fetchData() {
     })
 
     document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("fetchButton").addEventListener("click", fetchData);
+      document.getElementById("fetchButton").addEventListener("click", fetchData);
     });
     
 } fetchData ();
-
-
-// user inputs a keywod that matches something in ticketmaster api - whats enetered is valid 
-// find out valid keywords and drop downs 
-// ticket master website = family events 
-// figure out a way to search by address 
-// codes and cities 
-// test api
-// search up venue name 
-// click on event list - take the name of the venue automatically run the map search
-
