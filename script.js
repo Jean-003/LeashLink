@@ -222,5 +222,3 @@ function fetchData() {
         
     } fetchData ();
     
-
-
