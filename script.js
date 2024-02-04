@@ -90,17 +90,32 @@ function createMarker(place) {
   });
 }
 
-// Function to fetch data
+// second API Info
 function fetchData() {
-  var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=music&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx";
+  var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=search&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx"
 
-  console.log(queryURL); // Log the URL
+  console.log(queryURL); //log the url
 
-  fetch(queryURL)
-    .then(response => response.json())
-    .then(data => {
-      console.log(data); // Log the data
-      // Process the data as needed
+  fetch(queryURL) 
+    .then(response => response.json()) //access and use data 
+    .then(data => {  
+      console.log(data); //log the data 
+      var eventName = data.name;   //access event name property from data(test)
+      console.log(eventName); // log the name 
+      data._embedded.events.forEach(
+        event => {
+          console.log(event.name); // log event names to console
+          var listItem = document.createElement("li") // create a list item element of results
+          listItem.textContent = event.name // set content of list item to even name
+          document.getElementById("eventList").appendChild(listItem); // append list item to get event list
+        }
+      );
+      return data; // return the data 
+    })
+
+    .catch(error => { //handle any errors
+      console.error(error);
+
     })
     .catch(error => {
       console.error(error); // Handle any errors
@@ -115,7 +130,5 @@ document.addEventListener("DOMContentLoaded", function () {
       // When the "Search" button is clicked, execute the fetchData function
       fetchData();
     });
-  } else {
-    console.error('Element with ID "searchButton" not found.');
-  }
-});
+
+} fetchData ();
