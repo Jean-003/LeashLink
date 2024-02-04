@@ -2,6 +2,7 @@ body {
     font-family: 'Aoboshi One';
     font-size: 16px;
     line-height: 1;
+    padding: 8px;
   }
   
   textarea {
@@ -20,7 +21,7 @@ body {
     color: black;
     border-radius: 0;
     border-bottom: 10px solid black;
-    padding: 60px;
+    padding: 10px;
   }
   
   .description {
@@ -102,6 +103,16 @@ body {
     margin-right: 40px;
 }
 
+nav a {
+  color: black;
+  text-decoration: none; 
+  transition: color 0.3s; 
+}
+
+nav a:hover {
+  text-decoration: underline; 
+}
+
 #search-container {
     display: flex;
     flex-grow: 1;
@@ -150,7 +161,7 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
-  font-family: 'Aoboshi One';
+  font-family: Arial, Helvetica, sans-serif;
   font-size: large;
   font-weight: bold;
 }

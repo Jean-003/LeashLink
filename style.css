@@ -20,6 +20,16 @@
     margin-right: 40px;
 }
 
+nav a {
+    color: black;
+    text-decoration: none; 
+    transition: color 0.3s; 
+  }
+  
+  nav a:hover {
+    text-decoration: underline; 
+  }
+
 #search-container {
     display: flex;
     flex-grow: 1;
@@ -72,6 +82,14 @@ h1 {
     margin-right: auto;
     flex: 1;
 }
+
+#map {
+    height: 500px;
+    width: 75%;
+    margin: 0 auto; 
+    border: 2px solid black; 
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
@@ -88,7 +106,7 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    font-family: 'Aoboshi One';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     font-weight: bold;
   }
