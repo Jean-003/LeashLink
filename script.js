@@ -92,7 +92,7 @@ function createMarker(place) {
 
 // second API Info
 function fetchData() {
-  var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=search&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx"
+  var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=music&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx"
 
   console.log(queryURL); //log the url
 
