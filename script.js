@@ -122,13 +122,13 @@ function fetchData() {
     });
 }
 
-// Event listener for the "Search" button
+// Search button event listener 
 document.addEventListener("DOMContentLoaded", function () {
   var searchButton = document.getElementById("searchButton");
   if (searchButton) {
     searchButton.addEventListener("click", function () {
       // When the "Search" button is clicked, execute the fetchData function
       fetchData();
-    });
-
-} fetchData ();
+  });
+}
+}); fetchData ();

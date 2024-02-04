@@ -119,4 +119,19 @@ footer {
     text-decoration: underline; 
   }
 
-  
+  h2 {
+    font-family: 'Aoboshi One';
+    font-size: 60px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+  }
+
+  p {
+    font-family: 'Aoboshi One';
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
