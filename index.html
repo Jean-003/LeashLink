@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LeashLink</title>
+  <title>LeashLink - Home</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <!-- Google Maps API call -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU_inwZnKs6T42PMEH9X2qSFTqehMOs5A&libraries=places&callback=initMap" async defer></script>
-  <!--Favicon added-->
+  <!-- Favicon added -->
   <link rel="shortcut icon" type="image/x-icon" href="./favicon.png">
 </head>
+
 <body>
 
-  <!-- Navbar -->
+  <!-- Logo and Navbar -->
   <section>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div id="logo-bar">
+      <div id="companyname">
+        <img src="Logo for LeashLink.jpg" alt="" id="logo">
+      </div>
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/Project-1/index.html">Home</a>
             </li>
@@ -40,18 +48,10 @@
             <button id="searchButton" class="btn btn-outline-success" type="button">Search</button>
           </form>
         </div>
-      </div>
-    </nav>
-  </section>
-
-  <!-- Logo -->
-  <section>
-    <div id="logo-bar">
-      <div id="companyname">
-        <img src="Logo for LeashLink.jpg" alt="" id="logo">
-      </div>
+      </nav>
     </div>
   </section>
+
 
   <!-- Styling for the Map -->
   <style>
@@ -69,26 +69,26 @@
   <div id="map"></div>
 
 
-  <!--Footer-->
-<footer>
-  <p class="copyright"> LeashLink © 2024</p>
-  <ul>
-    <li class="footer-item">
-      <a href="/Project-1/index.html">Home</a>
-    </li>
-    <li class="footer-item">
-      <a href="./Calendar Section/indexcal.html">Meet Up</a>
-    </li>
-    <li class="footer-item">
-      <a href="#">About Us</a>
-    </li>
-    <li class="footer-item">
-      <a href="#">Contact Us</a>
-    </li>
-  </ul>
-</footer>
-  </section>
+  <!-- Footer -->
+  <footer>
+    <p class="copyright"> LeashLink © 2024</p>
+    <ul>
+      <li class="footer-item">
+        <a href="/Project-1/index.html">Home</a>
+      </li>
+      <li class="footer-item">
+        <a href="./Calendar Section/indexcal.html">Meet Up</a>
+      </li>
+      <li class="footer-item">
+        <a href="#">About Us</a>
+      </li>
+      <li class="footer-item">
+        <a href="#">Contact Us</a>
+      </li>
+    </ul>
+  </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>

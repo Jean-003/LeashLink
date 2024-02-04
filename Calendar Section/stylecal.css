@@ -1,179 +1,212 @@
 body {
-    font-family: 'Aoboshi One';
-    font-size: 16px;
-    line-height: 1;
-  }
-  
-  textarea {
-    background: transparent;
-    border: none;
-    resize: none;
-    color: #000000;
-    border-left: 1px solid black;
-    padding: 10px;
-  }
-  
-  header {
-    text-align: center;
-    font-family: 'Aoboshi One';
-    background-color: transparent;
-    color: black;
-    border-radius: 0;
-    border-bottom: 10px solid black;
-    padding: 60px;
-  }
-  
-  .description {
-    white-space: pre-wrap;
-  }
-  
-  .time-block {
-    text-align: center;
-    border-radius: 15px;
-  }
-  
-  .row {
-    white-space: pre-wrap;
-    height: 80px;
-    border-top: 1px solid white;
-  }
-  
-  .hour {
-    background-color: #ffffff;
-    color: #000000;
-    border-top: 1px dashed #000000;
-  }
-  
-  .past {
-    background-color: #d3d3d3;
-    color: white;
-  }
-  
-  .present {
-    background-color: #ff6961;
-    color: white;
-  }
-  
-  .future {
-    background-color: #77dd77;
-    color: white;
-  }
-  
-  .saveBtn {
-    border-left: 1px solid black;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: black;
-    color: white;
-  }
-  
-  .saveBtn i:hover {
-    background-color: #ffffff;
-    font-size: 20px;
-    transition: all 0.1s ease-in-out;
-  }
-  
-  #logo {
-    height: 100px;
-    margin-top: 28px;
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-  }
-
-#nav {
-    background-color: #fafdfdda;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px 10px;
-    height: 20px;
+  font-family: 'Aoboshi One';
+  font-size: 16px;
+  line-height: 1;
+  padding: 8px;
 }
 
-#nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
+textarea {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  border-left: 1px solid black;
+  padding: 10px;
 }
 
-#nav-list li {
-    margin-right: 40px;
+header {
+  text-align: center;
+  font-family: 'Aoboshi One';
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
+  padding: 10px;
 }
 
-#search-container {
-    display: flex;
-    flex-grow: 1;
-    margin: auto;
+.description {
+  white-space: pre-wrap;
 }
 
-#search-bar {
-    width: 300px;
-    height: 40px;
-    border-radius: 10px 0 0 10px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+.time-block {
+  text-align: center;
+  border-radius: 15px;
 }
 
-#search-button {
-    height: 40px;
-    border: 1px solid #ccc;
-    border-left: none;
-    border-radius: 0 10px 10px 0;
-    background: #fff;
-    cursor: pointer;
-    padding: 0 10px;
-    box-sizing: border-box;
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px solid white;
+}
+
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
+
+.past {
+  background-color: #d3d3d3;
+  color: white;
+}
+
+.present {
+  background-color: #ff6961;
+  color: white;
+}
+
+.future {
+  background-color: #77dd77;
+  color: white;
+}
+
+.saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: black;
+  color: white;
+}
+
+.saveBtn i:hover {
+  background-color: #ffffff;
+  font-size: 20px;
+  transition: all 0.1s ease-in-out;
 }
 
 #logo {
-    height: 200px;
-    margin-top: 28px;
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
+  height: 100px;
+  margin-top: 28px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+#nav {
+  background-color: #fafdfdda;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 10px;
+  height: 20px;
+}
+
+#nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+#nav-list li {
+  margin-right: 40px;
+}
+
+nav a {
+color: black;
+text-decoration: none; 
+transition: color 0.3s; 
+}
+
+nav a:hover {
+text-decoration: underline; 
+}
+
+#search-container {
+display: flex;
+align-items: center;
+margin-left: auto;
+}
+
+#search-bar {
+width: 300px;
+height: 40px;
+border-radius: 10px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-left: 10px;
+}
+
+#search-button {
+height: 40px;
+border: 1px solid #ccc;
+border-left: none;
+border-radius: 0 10px 10px 0;
+background: #fff;
+cursor: pointer;
+padding: 0 10px;
+box-sizing: border-box;
+}
+
+ul.navbar-nav {
+margin: 0;
+}
+
+#currentTime {
+font-size: 20px;
+color: #333;
+margin-bottom: 15px;
+}
+
+#search-button {
+  height: 40px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+  background: #fff;
+  cursor: pointer;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+#logo {
+  height: 200px;
+  margin-top: 28px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  align-items: center;
-  margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
+align-items: center;
+margin: 0;
 }
 
 footer {
-  background-color: white;
-  color: black; 
-  padding: 20px; 
-  text-align: center; 
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  font-family: 'Aoboshi One';
-  font-size: large;
-  font-weight: bold;
+background-color: white;
+color: black; 
+padding: 20px; 
+text-align: center; 
+position: fixed;
+width: 100%;
+bottom: 0;
+font-family: Arial, Helvetica, sans-serif;
+font-size: large;
+font-weight: bold;
 }
 
 footer ul {
-  list-style: none; 
-  padding: 0; 
-  margin: 0; 
+list-style: none; 
+padding: 0; 
+margin: 0; 
 }
 
 .footer-item {
-  display: inline-block; 
-  margin-right: 100px;
-  font-weight: 100;
-  font-size: medium;
+display: inline-block; 
+margin-right: 100px;
+font-weight: 100;
+font-size: medium;
 }
 
 footer a {
-  color: black;
-  text-decoration: none; 
-  transition: color 0.3s; 
+color: black;
+text-decoration: none; 
+transition: color 0.3s; 
 }
 
 footer a:hover {
-  text-decoration: underline; 
+text-decoration: underline; 
 }
