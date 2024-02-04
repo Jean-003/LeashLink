@@ -1,4 +1,3 @@
-
 // Make map a global variable because it doesn't like it if it isn't
 var map;
 
@@ -6,13 +5,9 @@ var map;
 function initMap() {
   // Check if geolocation is supported in the browser
   if (navigator.geolocation) {
-   
-   
     // Get the user's current position
     navigator.geolocation.getCurrentPosition(
       function (position) {
-        
-        
         // User's location coordinates
         var userLocation = {
           lat: position.coords.latitude,
@@ -35,7 +30,6 @@ function initMap() {
           icon: 'https://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png'
         });
 
-       
         // Use geocoding to get the city name based on the user's location
         var geocoder = new google.maps.Geocoder();
         geocoder.geocode({ location: userLocation }, function (results, status) {
@@ -47,7 +41,6 @@ function initMap() {
           }
         });
 
-        
         // Search for Dog parks around user's location within 10 miles
         var request = {
           location: userLocation,
@@ -59,8 +52,6 @@ function initMap() {
         var placesService = new google.maps.places.PlacesService(map);
         placesService.nearbySearch(request, function (results, status) {
           if (status === google.maps.places.PlacesServiceStatus.OK) {
-            
-            
             // Loop through to create multiple markers
             for (var i = 0; i < results.length; i++) {
               createMarker(results[i]);
@@ -79,7 +70,6 @@ function initMap() {
 
 // Function to create a marker for a given place
 function createMarker(place) {
-
   // Create a marker for the places
   var marker = new google.maps.Marker({
     map: map,
@@ -92,44 +82,40 @@ function createMarker(place) {
 
   // Add a click listener to the marker to show the info window
   marker.addListener('click', function () {
-    
-    
     // Set the content of the infowindow
     infowindow.setContent('<div><strong>' + place.name + '</strong></div>');
-    
+
     // Open the infowindow on the map
     infowindow.open(map, marker);
   });
 }
 
-
+// Function to fetch data (you can customize this according to your needs)
 function fetchData() {
-  var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=music&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx"
+  var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=music&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx";
 
-  
-  console.log(queryURL); //log the url
+  console.log(queryURL); // Log the URL
 
-
-  fetch(queryURL) 
-    .then(response => response.json()) //access and use data 
-    .then(data => {  
-      console.log(data); //log the data 
-      var eventName = data.name;   //access event name property from data(test)
-      console.log(eventName) // log the name 
-      data.events.forEach(
-        event => {
-          console.log(event.name);
-        }
-      );
-      return data; // return the data 
+  fetch(queryURL)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data); // Log the data
+      // Process the data as needed
     })
-
-    .catch(error => { //handle any errors
-      console.error(error);
-    })
-
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("fetchButton").addEventListener("click", fetchData);
+    .catch(error => {
+      console.error(error); // Handle any errors
     });
-    
-} fetchData ();
+}
+
+// Event listener for the "Search" button
+document.addEventListener("DOMContentLoaded", function () {
+  var searchButton = document.getElementById("searchButton");
+  if (searchButton) {
+    searchButton.addEventListener("click", function () {
+      // When the "Search" button is clicked, execute the fetchData function
+      fetchData();
+    });
+  } else {
+    console.error('Element with ID "searchButton" not found.');
+  }
+});
