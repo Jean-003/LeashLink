@@ -131,4 +131,4 @@ document.addEventListener("DOMContentLoaded", function () {
       fetchData();
   });
 }
-}); fetchData ();
+}); // Removed function call to prevent information from being called on page load and to only execute when button clicked.
