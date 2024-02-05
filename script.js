@@ -108,10 +108,10 @@ function fetchData() {
                     var listItem = document.createElement("li") // create a list item element of results
                     listItem.textContent = event.name // set content of list item to even name
                     document.getElementById("eventList").appendChild(listItem); // append list item to get event list
-                    var eventLocation = {
+                    var eventLocation = { 
                         lat: Number.parseFloat(event._embedded.venues[0].location.latitude),
                         lng: Number.parseFloat(event._embedded.venues[0].location.longitude),
-                    };
+                    }; // calling on the event names to create markers for the locations and using Number.parseFloat to turn string into decimal numbers for long and lat to be called. 
                     createMarker(event.name, eventLocation)
                 }
             );
@@ -137,4 +137,5 @@ document.addEventListener("DOMContentLoaded", function () {
             fetchData();
         });
     }
-}); // Removed function call to prevent information from being called on page load and to only execute when button clicked.
+}); // Removed "function()" outside of event listener to prevent information from being called on page load and to only execute when button clicked.
+
