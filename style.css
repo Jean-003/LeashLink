@@ -243,6 +243,7 @@ footer a:hover {
     text-decoration: underline; 
   }
 
+  /* about me  */
   h2 {
     font-family: 'Aoboshi One';
     font-size: 60px;
@@ -259,8 +260,10 @@ footer a:hover {
     display: flex;
     justify-content: center;
     text-align: center;
-  }
+  } 
 
+
+/* footer */
   h6 {
     border-top: 2px, grey;
     font-family: 'Aoboshi One';
