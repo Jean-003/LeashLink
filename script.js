@@ -90,9 +90,9 @@ function createMarker(name, location) {
     });
 }
 
-// second API Info
+// // second API Info 
 function fetchData() {
-    var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx"
+    var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=search&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx"
 
     console.log(queryURL); //log the url
 
@@ -118,7 +118,7 @@ function fetchData() {
             return data; // return the data 
         })
 
-        .catch(error => { //handle any errors
+        .catch(error => { //find any errors
             console.error(error);
 
         })
@@ -127,15 +127,19 @@ function fetchData() {
         });
 }
 
-// Search button event listener 
+// Search button event listener - !!IMPORTANT - Please ensure you 'click' the search button to return data!!
 
 document.addEventListener("DOMContentLoaded", function () {
-    var searchButton = document.getElementById("searchButton");
-    if (searchButton) {
-        searchButton.addEventListener("click", function () {
+    var formSearch = document.getElementById("formSubmit")
+    // var searchButton = document.getElementById("searchButton") revised to carry out function on form submit, this is to improve the UI for users interacting with the page;
+    if (formSearch) {
+        formSearch.addEventListener("submit", function (event) {
+            event.preventDefault()
+            var modal= document.getElementById("exampleModal")
+            modal.show();
+
             // When the "Search" button is clicked, execute the fetchData function
             fetchData();
         });
     }
 }); // Removed "function()" outside of event listener to prevent information from being called on page load and to only execute when button clicked.
-
