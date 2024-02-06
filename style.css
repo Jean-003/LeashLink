@@ -153,6 +153,33 @@ footer {
     justify-content: center;
     text-align: center;
   }
+ /* about me pawprint styling */
+.paws {
+  background-image: url("./images/pawprint.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+height: 150px;
+width: 100%;
+
+}
+
+.paws-a {
+  background-image: url("./images/pawprint.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+height: 80px;
+width: 100%;
+opacity: 50%;
+}
+
+.paws-b {
+  background-image: url("./images/pawprint.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+height: 50px;
+width: 100%;
+opacity: 50%;
+}
 
 /* Style for the list inside the footer */
 footer ul {
@@ -216,8 +243,8 @@ footer a:hover {
     text-decoration: underline; 
   }
 
+  /* about me  */
   h2 {
-    background-image: url=("./images/download.png/")
     font-family: 'Aoboshi One';
     font-size: 60px;
     font-weight: 800;
@@ -233,10 +260,12 @@ footer a:hover {
     display: flex;
     justify-content: center;
     text-align: center;
-  }
+  } 
 
+
+/* footer */
   h6 {
     border-top: 2px, grey;
     font-family: 'Aoboshi One';
-    font-size: 20px;
+    font-size: 10px;
   }

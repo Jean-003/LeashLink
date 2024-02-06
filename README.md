@@ -44,11 +44,11 @@ Credits
 Bootcamp spot 1-1 tuition. 
 
 Team collaboration: Group 4
-Jean 
-Mohammed 
-Sam 
-Iyanu 
-Sameerah Khalid
+- Sameerah Khalid - https://github.com/The-real-sammy
+- Sam 
+- Mohammed 
+- Jean 
+- Iyanu 
 
 Third partY API
 Tutorials:
