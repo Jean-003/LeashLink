@@ -26,6 +26,13 @@ nav a {
   transition: color 0.3s; 
 }
 
+
+.card-img-top {
+  height: 350px;
+  width: 400px; 
+  object-fit: cover; 
+}
+
 nav a:hover {
   text-decoration: underline; 
 }
