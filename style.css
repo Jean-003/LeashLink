@@ -22,8 +22,8 @@
 
 nav a {
   color: black;
-  text-decoration: none; 
-  transition: color 0.3s; 
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 
@@ -34,7 +34,7 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 #search-container {
@@ -62,6 +62,17 @@ nav a:hover {
   box-sizing: border-box;
 }
 
+
+.dark-mode {
+  background-color: black;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
 #logo {
   height: 200px;
   margin-top: 28px;
@@ -74,7 +85,7 @@ h1 {
   font-family: 'Aoboshi One';
   font-size: 60px;
   font-weight: 800;
-  color:#0a544fda;
+  color: #0a544fda;
   border: 0.5px;
   border-color: #0a544fda;
   border-width: 20cm;
@@ -93,8 +104,8 @@ h1 {
 #map {
   height: 500px;
   width: 75%;
-  margin: 0 auto; 
-  border: 2px solid black; 
+  margin: 0 auto;
+  border: 2px solid black;
 }
 
 body {
@@ -107,27 +118,27 @@ body {
 /* Style for the footer */
 footer {
   background-color: white;
-  color: black; 
-  padding: 20px; 
-  text-align: center; 
+  color: black;
+  padding: 20px;
+  text-align: center;
   position: fixed;
   width: 100%;
   bottom: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Aoboshi One';
   font-size: large;
   font-weight: bold;
 }
 
 /* Style for the list inside the footer */
 footer ul {
-  list-style: none; 
-  padding: 0; 
-  margin: 0; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Style for each list item in the footer */
 .footer-item {
-  display: inline-block; 
+  display: inline-block;
   margin-right: 100px;
   font-weight: 100;
   font-size: medium;
@@ -136,11 +147,144 @@ footer ul {
 /* Style for links in the footer */
 footer a {
   color: black;
-  text-decoration: none; 
-  transition: color 0.3s; 
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 footer a:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
+h2 {
+  font-family: 'Aoboshi One';
+  font-size: 60px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  font-family: 'Aoboshi One';
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* about me pawprint styling */
+.paws {
+  background-image: url("./images/pawprint.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 150px;
+  width: 100%;
+
+}
+
+.paws-a {
+  background-image: url("./images/pawprint.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 80px;
+  width: 100%;
+  opacity: 50%;
+}
+
+.paws-b {
+  background-image: url("./images/pawprint.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 50px;
+  width: 100%;
+  opacity: 50%;
+}
+
+/* Style for the list inside the footer */
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for each list item in the footer */
+.footer-item {
+  display: inline-block;
+  margin-right: 100px;
+  font-weight: 100;
+  font-size: medium;
+}
+
+/* Style for links in the footer */
+footer a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-family: 'Aoboshi One';
+  font-size: large;
+  font-weight: bold;
+}
+
+/* Style for the list inside the footer */
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for each list item in the footer */
+.footer-item {
+  display: inline-block;
+  margin-right: 100px;
+  font-weight: 100;
+  font-size: medium;
+}
+
+/* Style for links in the footer */
+footer a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* about me  */
+h2 {
+  font-family: 'Aoboshi One';
+  font-size: 60px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  font-family: 'Aoboshi One';
+  font-size: 14px;
+  font-weight: 400;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/* footer */
+h6 {
+  border-top: 2px, grey;
+  font-family: 'Aoboshi One';
+  font-size: 10px;
+}
