@@ -1,14 +1,86 @@
 @import url("https://fonts.googleapis.com/css?family=Aoboshi One");
+#logo {
+  height: 200px;
+  margin-top: 28px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
 
-body {
+#companyname {
+  background-color: #fff;
+}
+
+#nav {
+  background-color: #fafdfdda;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 10px;
+  height: 20px;
+}
+
+#nav-list {
+  list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+
+#nav-list li {
+  margin-right: 40px;
+}
+
+nav a {
+color: black;
+text-decoration: none; 
+transition: color 0.3s; 
+}
+
+nav a:hover {
+text-decoration: underline; 
+}
+
+#search-container {
+display: flex;
+align-items: center;
+margin-left: auto;
+}
+
+#search-bar {
+width: 300px;
+height: 40px;
+border-radius: 10px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-left: 10px;
+}
+
+#search-button {
+height: 40px;
+border: 1px solid #ccc;
+border-left: none;
+border-radius: 0 10px 10px 0;
+background: #fff;
+cursor: pointer;
+padding: 0 10px;
+box-sizing: border-box;
+}
+
+ul.navbar-nav {
+margin: 0;
+}
+
+
+
+body {
+  margin: 50;
+  padding: 50;
   min-height: 100vh;
   background: #262626;
   font-family: "Aoboshi One", sans-serif;
+
 }
 
 .container {
@@ -160,26 +232,99 @@ body {
 
 .lastcard {
   position: relative;
-  min-width: 280px;
+  width: calc(50% - 20px);
   min-height: 280px;
   background: #fff;
   margin: 10px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.lastcard .profilephoto {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.lastcard .profilevideo {
+  width: 283px;
+  height: 278px;
+  overflow: hidden;
 }
 
-
-.lastcard .profilephoto img {
-  border-radius: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
+.lastcard .profilevideo video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+.paws-b {
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 50px;
+  width: 100%;
+  opacity: 50%;
+}
+
+/* Style for the footer */
+footer {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: large;
+  font-weight: bold;
+  position: relative;
+  z-index: 1; 
+}
+
+body {
+  margin-bottom: 60px; 
+}
+
+/* Style for links in the footer */
+footer a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Style for the list inside the footer */
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for each list item in the footer */
+.footer-item {
+  display: inline-block;
+  margin-right: 20px; 
+  font-weight: 100;
+  font-size: medium;
+}
+
+/* about me pawprint styling */
+.paws {
+  background-image: url("./images/pawprint.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 150px;
+  width: 100%;
+}
+
+/* about me */
+h2, p {
+  font-family: Arial, Helvetica, sans-serif; 
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  color: gray;
+}
+
