@@ -1,4 +1,6 @@
 /* css style for navigation bar */
+
+
 #nav {
   background-color: #fafdfdda;
   display: flex;
@@ -26,6 +28,27 @@ nav a {
   transition: color 0.3s;
 }
 
+
+#about-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
+  background-color: #292929;
+  color: #292929;
+}
+
+#about-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+#eventList {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  align-items: center;
+  padding-top: 10px;
+}
 
 .card-img-top {
   height: 350px;
@@ -70,7 +93,7 @@ nav a:hover {
 
 
 #logo {
-  height: 200px;
+  height: 400px;
   margin-top: 28px;
   margin-right: auto;
   margin-left: auto;
@@ -97,18 +120,29 @@ h1 {
   flex: 1;
 }
 
-#map {
-  height: 500px;
-  width: 75%;
-  margin: 0 auto;
-  border: 2px solid black;
-}
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   align-items: center;
   margin: 0;
+}
+
+
+/* Map Container */
+#map {
+  height: 600px;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid black;
+  padding-bottom: 50px;
+}
+
+.paws-b {
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 50px;
+  width: 100%;
+  opacity: 50%;
 }
 
 /* Style for the footer */
@@ -120,24 +154,9 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
-  font-family: 'Aoboshi One';
+  font-family: Arial, Helvetica, sans-serif; 
   font-size: large;
   font-weight: bold;
-}
-
-/* Style for the list inside the footer */
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Style for each list item in the footer */
-.footer-item {
-  display: inline-block;
-  margin-right: 100px;
-  font-weight: 100;
-  font-size: medium;
 }
 
 /* Style for links in the footer */
@@ -151,21 +170,19 @@ footer a:hover {
   text-decoration: underline;
 }
 
-h2 {
-  font-family: 'Aoboshi One';
-  font-size: 60px;
-  font-weight: 800;
-  display: flex;
-  justify-content: center;
+/* Style for the list inside the footer */
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-p {
-  font-family: 'Aoboshi One';
-  font-size: 14px;
-  font-weight: 400;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+/* Style for each list item in the footer */
+.footer-item {
+  display: inline-block;
+  margin-right: 20px; 
+  font-weight: 100;
+  font-size: medium;
 }
 
 /* about me pawprint styling */
@@ -175,117 +192,25 @@ p {
   background-size: contain;
   height: 150px;
   width: 100%;
-
 }
 
-#map {
-  height: 400px;
-  width: 100%;
-}
-
-.paws-a {
-  background-image: url("./images/pawprint.jpg");
-  background-repeat: repeat-x;
-  background-size: contain;
-  height: 80px;
-  width: 100%;
-  opacity: 50%;
-}
-
-.paws-b {
-  background-image: url("./images/pawprint.jpg");
-  background-repeat: repeat-x;
-  background-size: contain;
-  height: 50px;
-  width: 100%;
-  opacity: 50%;
-}
-
-/* Style for the list inside the footer */
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Style for each list item in the footer */
-.footer-item {
-  display: inline-block;
-  margin-right: 100px;
-  font-weight: 100;
-  font-size: medium;
-}
-
-/* Style for links in the footer */
-footer a {
-  color: black;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-footer a:hover {
-  text-decoration: underline;
-  background-color: white;
-  color: black;
-  padding: 20px;
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  font-family: 'Aoboshi One';
-  font-size: large;
-  font-weight: bold;
-}
-
-/* Style for the list inside the footer */
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Style for each list item in the footer */
-.footer-item {
-  display: inline-block;
-  margin-right: 100px;
-  font-weight: 100;
-  font-size: medium;
-}
-
-/* Style for links in the footer */
-footer a {
-  color: black;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* about me  */
-h2 {
-  font-family: 'Aoboshi One';
-  font-size: 60px;
-  font-weight: 800;
+/* about me */
+h2, p {
+  font-family: Arial, Helvetica, sans-serif; 
   display: flex;
   justify-content: center;
 }
 
 p {
-  font-family: 'Aoboshi One';
   font-size: 14px;
   font-weight: 400;
   color: gray;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
-
 
 /* footer */
 h6 {
-  border-top: 2px, grey;
-  font-family: 'Aoboshi One';
+  border-top: 2px solid grey; 
+  font-family: Arial, Helvetica, sans-serif; 
   font-size: 10px;
+  padding-top: 10px;
 }
