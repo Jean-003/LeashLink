@@ -24,6 +24,24 @@ header {
   padding: 10px;
 }
 
+p {
+  font-family: 'Aoboshi One';
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.paws-a {
+  background-image: url("../images/pawprint.jpg");
+  background-repeat: repeat-x;
+  background-size: contain;
+height: 80px;
+width: 100%;
+opacity: 50%;
+}
+
 .description {
   white-space: pre-wrap;
 }
@@ -39,24 +57,37 @@ header {
   border-top: 1px solid white;
 }
 
+.column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Define the size of each column */
+  white-space: pre-wrap;
+  height: 80px;
+  display: grid;
+  border-top: 1px solid white;
+}
+
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  grid-template-columns: 1fr 1fr 1fr; /* Define the size of each column */
+
 }
 
 .past {
-  background-color: #d3d3d3;
-  color: white;
+  background-color: rgb(118, 116, 116);;
+  color: rgb(158, 154, 154);
 }
 
 .present {
-  background-color: #ff6961;
-  color: white;
+  background-color: rgb(246, 211, 70);
+  color:black;
+  background-image: linear-gradient(rgb(246, 211, 70), rgb(216, 196, 130)
+   rgb(215, 199, 148), rgb(246, 211, 70));
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: rgb(56, 55, 55);
   color: white;
 }
 
@@ -144,6 +175,9 @@ margin: 0;
 }
 
 #currentTime {
+font-family: 'Aoboshi One';
+font-size: 40px;
+font-weight: 300;
 font-size: 20px;
 color: #333;
 margin-bottom: 15px;
@@ -210,3 +244,22 @@ transition: color 0.3s;
 footer a:hover {
 text-decoration: underline; 
 }
+
+h2 {
+  font-family: 'Aoboshi One';
+  font-size: 40px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  color: rgb(89, 87, 87);
+}
+
+p {
+  font-family: 'Aoboshi One';
+  font-size: 14px;
+  font-weight: 400;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+} 

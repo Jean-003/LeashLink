@@ -17,6 +17,35 @@
 </head>
 
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#meet">Meet Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Contact us page/Team.html">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button id="searchButton" class="btn btn-outline-dark" type="button">Search</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</section>
+
   <!-- Logo and Navbar -->
   <section>
     <div id="logo-bar">
@@ -24,38 +53,10 @@
         <img src="../images/Logo for LeashLink.jpg" alt="" id="logo">
       </div>
 
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./Calendar Section/indexcal.html">Meet Up</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../Contact us page/Team.html">Contact Us</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button id="searchButton" class="btn btn-outline-success" type="button">Search</button>
-          </form>
-        </div>
-      </nav>
-    </div>
-  </section>
-
+    
   <!-- Header -->
   <header>
-    <h1 class="display-3">Meet Up</h1>
+    <h1 class="display-3" id = "meet" >Meet Up</h1>
     <p class="lead">Add in your availability to arrange a meet up!</p>
     <p id="currentDay" class="lead"></p>
     <div id="currentTime"></div>
@@ -74,20 +75,44 @@
     <p class="copyright"> LeashLink © 2024</p>
     <ul>
       <li class="footer-item">
-        <a href="../index.html">Home</a>
+        <a href="#logo">Home</a>
       </li>
       <li class="footer-item">
-        <a href="./Calendar Section/indexcal.html">Meet Up</a>
+        <a href="https://open.spotify.com/playlist/3aKKrqqk7gYRtrMlz7CAda?si=f8d9a0da7c374cb6">Spotify!</a>
       </li>
       <li class="footer-item">
-        <a href="#">About Us</a>
+        <a href="#about">About Us</a>
       </li>
       <li class="footer-item">
-        <a href="../Contact us page/Team.html">Contact Us</a>
+        <a href="../Contact us page/Team.html" id="Contact" data-bs-toggle="Modal">Contact Us</a>
       </li>
-    </ul>
-  </footer>
 
+     <!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title contact" id="contactModalLabel" >Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" class ="btn btn-outline-dark"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Add your contact form or content here -->
+        <p>Link-leash contact form!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </ul>
+    <section class="paws-b"></section> 
+    <div>
+      <h6>Made with 💛 by Group-4</h6> 
+    </div>
+  </footer> 
 </body>
 
 </html>
