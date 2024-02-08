@@ -27,13 +27,20 @@ Alternatively, review the files within the repository: [Leash Link Repo](https:/
 
 ## Screenshots
 
-### Image 01: 
+#### Image 01: 
+<img width="1267" alt="Screenshot 2024-02-08 at 21 48 13" src="https://github.com/The-real-sammy/SK-Portfolio-CSS/assets/152024562/3949d8fd-e778-4fec-a408-803bf719cf1d">
 
+#### Image 02: 
+<img width="1250" alt="Screenshot 2024-02-08 at 21 48 23" src="https://github.com/The-real-sammy/SK-Portfolio-CSS/assets/152024562/d451b954-8c8b-4d2a-bfc9-d2256f1050e8">
 
+#### Image 03: 
+<img width="1279" alt="Screenshot 2024-02-08 at 21 49 13" src="https://github.com/The-real-sammy/SK-Portfolio-CSS/assets/152024562/b75d0cd3-acae-48f2-82a3-40137e792bfb">
 
+#### Image 04: 
+<img width="1254" alt="Screenshot 2024-02-08 at 21 49 22" src="https://github.com/The-real-sammy/SK-Portfolio-CSS/assets/152024562/f9ea3262-fe5c-41ef-a7e9-e987ebf81eef">
 
-
-
+#### Image 05: 
+<img width="1250" alt="Screenshot 2024-02-08 at 21 49 33" src="https://github.com/The-real-sammy/SK-Portfolio-CSS/assets/152024562/b0ee5e65-d394-4ca8-8274-edfd5061fbe4">
 
 ## Credits
 
@@ -53,5 +60,5 @@ FreeCodeCamp
 Dev.to
 Bootcamp spot 1-1 tuition: Wesley Clements
 
-#### License
+## License
 Please refer to the LICENSE file in the repository for more information.
