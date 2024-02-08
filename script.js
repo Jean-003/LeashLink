@@ -80,6 +80,7 @@ function createMarker(name, location) {
     // Create an info window for the marker to show more details
     var infowindow = new google.maps.InfoWindow();
 
+
     // Add a click listener to the marker to show the info window
     marker.addListener('click', function () {
         // Set the content of the infowindow
@@ -87,18 +88,23 @@ function createMarker(name, location) {
 
         // Open the infowindow on the map
         infowindow.open(map, marker);
+        console.log("info window? what is that", infowindow)
+      
     });
-}
+} 
+
 
 // Function to fetch event data and display it in the modal
 function fetchData() {
     var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=family&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx";
+
 
     console.log(queryURL); // Log the URL
 
     fetch(queryURL)
         .then(response => response.json()) // Access and use data 
         .then(data => {
+
             console.log("This is the data:", data); // Log the data 
             var eventData = data._embedded.events; // Access event name and events property from data
             console.log("This is the events data:", eventData); // Log the names and information
@@ -117,9 +123,11 @@ function fetchData() {
             return data; // Return the data
         })
         .catch(error => { // Handle any errors
+
             console.error(error);
         });
 }
+
 
 // Function to display event data in the modal body
 function displayEventData(eventData) {
@@ -140,14 +148,17 @@ function displayEventData(eventData) {
 
 // Event listener for form submission
 document.addEventListener("DOMContentLoaded", function () {
+
     var formSearch = document.getElementById("formSubmit");
     if (formSearch) {
         formSearch.addEventListener("submit", function (event) {
             event.preventDefault();
             console.log("Form submitted");
             fetchData(); // Fetch data when the form is submitted
+
         });
     } else {
         console.error("Form not found!");
     }
+
 });
