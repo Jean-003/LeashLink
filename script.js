@@ -80,6 +80,7 @@ function createMarker(name, location) {
     // Create an info window for the marker to show more details
     var infowindow = new google.maps.InfoWindow();
 
+
     // Add a click listener to the marker to show the info window
     marker.addListener('click', function () {
         // Set the content of the infowindow
@@ -87,27 +88,33 @@ function createMarker(name, location) {
 
         // Open the infowindow on the map
         infowindow.open(map, marker);
+        console.log("info window? what is that", infowindow)
+      
     });
-}
+} 
 
-// second API Info
+// // second API Info 
 function fetchData() {
-    var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx"
+    var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=family&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx"
 
     console.log(queryURL); //log the url
 
     fetch(queryURL)
         .then(response => response.json()) //access and use data 
         .then(data => {
-            console.log(data); //log the data 
-            var eventName = data.name;   //access event name property from data(test)
-            console.log(eventName); // log the name 
-            data._embedded.events.forEach(
+            console.log("This is the data:", data); //log the data 
+            var eventData = data._embedded.events;   //revised to access event name and events property from data correctly. (test)
+            console.log("This is the events data i want to return in the modal", eventData); // log the names and information
+
+            eventData.forEach(
                 event => {
-                    console.log(event); // log event names to console
-                    var listItem = document.createElement("li") // create a list item element of results
-                    listItem.textContent = event.name // set content of list item to even name
-                    document.getElementById("eventList").appendChild(listItem); // append list item to get event list
+                    var listItem = document.createElement("li") // create a 
+                    // list item element of results
+                
+                    listItem.textContent = event.name// set content of list item to event name
+                    // modalBody.appendChild(listItem)
+                    document.getElementById("eventList").appendChild(listItem); // append list item to get event list.
+                //  
                     var eventLocation = {
                         lat: Number.parseFloat(event._embedded.venues[0].location.latitude),
                         lng: Number.parseFloat(event._embedded.venues[0].location.longitude),
@@ -115,10 +122,11 @@ function fetchData() {
                     createMarker(event.name, eventLocation)
                 }
             );
+            displayEventData(eventData); // This is to display the events data above next
             return data; // return the data 
         })
 
-        .catch(error => { //handle any errors
+        .catch(error => { //find any errors
             console.error(error);
 
         })
@@ -127,23 +135,33 @@ function fetchData() {
         });
 }
 
-// Search button event listener 
+function displayEventData(eventData) {
+var modalBody = document.querySelector (".modal-body");
+console.log("This is the modal body?", modalBody);
+
+if (modalBody) {
+    modalBody.innerHTML="";
+    eventData.forEach (event => {
+        var listItem = document.createElement("div");
+        listItem.textContent= event.name;
+        modalBody.appendChild(listItem);
+    });
+}
+else {
+    console.error ("modal where are you? idk (=◉ᆽ◉=)")
+}};
+// Search button event listener - revised to execute on form submit not search button click.
 
 document.addEventListener("DOMContentLoaded", function () {
-    var searchButton = document.getElementById("searchButton");
-    if (searchButton) {
-        searchButton.addEventListener("click", function () {
-            // When the "Search" button is clicked, execute the fetchData function
+    var formSearch = document.getElementById("formSubmit")
+    // var searchButton = document.getElementById("searchButton") revised to carry out function on form submit, this is to improve the UI for users interacting with the page;
+    if (formSearch) {
+        formSearch.addEventListener("submit", function (event) {
+            event.preventDefault()
+            console.log("form submitted????");
+
+            // When the "Search" button form is submitted, execute the fetchData function
             fetchData();
         });
     }
-}); // Removed "function()" outside of event listener to prevent information from being called on page load and to only execute when button clicked.
-
-// Dark Mode Button
-
-const darkModeBtn = document.getElementById('darkModeBtn');
-const body = document.body;
-
-darkModeBtn.addEventListener('click', function() {
-  body.classList.toggle('dark-mode');
-});
+}); // Removed "function()" outside of event listener to prevent information from being called on page load and to only execute when form is submitted.
