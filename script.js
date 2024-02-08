@@ -93,75 +93,72 @@ function createMarker(name, location) {
     });
 } 
 
-// // second API Info 
-function fetchData() {
-    var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=family&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx"
 
-    console.log(queryURL); //log the url
+// Function to fetch event data and display it in the modal
+function fetchData() {
+    var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=family&dmaId=324&apikey=idVREd0toy5AGDXaGZhf07ksmoaUk7kx";
+
+
+    console.log(queryURL); // Log the URL
 
     fetch(queryURL)
-        .then(response => response.json()) //access and use data 
+        .then(response => response.json()) // Access and use data 
         .then(data => {
-            console.log("This is the data:", data); //log the data 
-            var eventData = data._embedded.events;   //revised to access event name and events property from data correctly. (test)
-            console.log("This is the events data i want to return in the modal", eventData); // log the names and information
 
-            eventData.forEach(
-                event => {
-                    var listItem = document.createElement("li") // create a 
-                    // list item element of results
-                
-                    listItem.textContent = event.name// set content of list item to event name
-                    // modalBody.appendChild(listItem)
-                    document.getElementById("eventList").appendChild(listItem); // append list item to get event list.
-                //  
-                    var eventLocation = {
-                        lat: Number.parseFloat(event._embedded.venues[0].location.latitude),
-                        lng: Number.parseFloat(event._embedded.venues[0].location.longitude),
-                    }; // calling on the event names to create markers for the locations and using Number.parseFloat to turn string into decimal numbers for long and lat to be called. 
-                    createMarker(event.name, eventLocation)
-                }
-            );
-            displayEventData(eventData); // This is to display the events data above next
-            return data; // return the data 
+            console.log("This is the data:", data); // Log the data 
+            var eventData = data._embedded.events; // Access event name and events property from data
+            console.log("This is the events data:", eventData); // Log the names and information
+
+            eventData.forEach(event => {
+                var listItem = document.createElement("li"); // Create a list item element for results
+                listItem.textContent = event.name; // Set content of list item to event name
+                document.getElementById("eventList").appendChild(listItem); // Append list item to event list
+                var eventLocation = {
+                    lat: Number.parseFloat(event._embedded.venues[0].location.latitude),
+                    lng: Number.parseFloat(event._embedded.venues[0].location.longitude)
+                }; // Retrieve event names to create markers for the locations
+                createMarker(event.name, eventLocation);
+            });
+            displayEventData(eventData); // Display the events data
+            return data; // Return the data
         })
+        .catch(error => { // Handle any errors
 
-        .catch(error => { //find any errors
             console.error(error);
-
-        })
-        .catch(error => {
-            console.error(error); // Handle any errors
         });
 }
 
+
+// Function to display event data in the modal body
 function displayEventData(eventData) {
-var modalBody = document.querySelector (".modal-body");
-console.log("This is the modal body?", modalBody);
+    var modalBody = document.querySelector(".modal-body");
+    console.log("This is the modal body:", modalBody);
 
-if (modalBody) {
-    modalBody.innerHTML="";
-    eventData.forEach (event => {
-        var listItem = document.createElement("div");
-        listItem.textContent= event.name;
-        modalBody.appendChild(listItem);
-    });
+    if (modalBody) {
+        modalBody.innerHTML = "";
+        eventData.forEach(event => {
+            var listItem = document.createElement("div");
+            listItem.textContent = event.name;
+            modalBody.appendChild(listItem);
+        });
+    } else {
+        console.error("Modal not found!");
+    }
 }
-else {
-    console.error ("modal where are you? idk (=◉ᆽ◉=)")
-}};
-// Search button event listener - revised to execute on form submit not search button click.
 
+// Event listener for form submission
 document.addEventListener("DOMContentLoaded", function () {
-    var formSearch = document.getElementById("formSubmit")
-    // var searchButton = document.getElementById("searchButton") revised to carry out function on form submit, this is to improve the UI for users interacting with the page;
+
+    var formSearch = document.getElementById("formSubmit");
     if (formSearch) {
         formSearch.addEventListener("submit", function (event) {
-            event.preventDefault()
-            console.log("form submitted????");
+            event.preventDefault();
+            console.log("Form submitted");
+            fetchData(); // Fetch data when the form is submitted
 
-            // When the "Search" button form is submitted, execute the fetchData function
-            fetchData();
         });
+    } else {
+        console.error("Form not found!");
     }
-}); // Removed "function()" outside of event listener to prevent information from being called on page load and to only execute when form is submitted.
+
+});

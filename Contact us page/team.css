@@ -6,9 +6,12 @@
   margin-left: auto;
   display: block;
 }
+
+
 #companyname {
   background-color: #fff;
 }
+
 #nav {
   background-color: #fafdfdda;
   display: flex;
@@ -16,6 +19,22 @@
   align-items: center;
   padding: 10px 10px;
   height: 20px;
+}
+
+#nav-list {
+  list-style-type: none;
+
+
+#nav-list li {
+  margin-right: 40px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+ 
 }
 #nav-list {
   list-style-type: none;
@@ -67,11 +86,13 @@ ul.navbar-nav {
 margin: 0;
 }
 body {
+
   margin: 50;
   padding: 50;
   min-height: 100vh;
   background: #262626;
   font-family: "Aoboshi One", sans-serif;
+
 }
 .container {
   width: 1200px;
@@ -215,6 +236,7 @@ flex-direction: ; */
   justify-content: center;
   align-items: center;
 }
+
 .lastcard .profilevideo {
   width: 283px;
   height: 278px;
@@ -254,9 +276,11 @@ footer a {
   text-decoration: none;
   transition: color 0.3s;
 }
+
 footer a:hover {
   text-decoration: underline;
 }
+
 /* Style for the list inside the footer */
 footer ul {
   list-style: none;
@@ -270,6 +294,7 @@ footer ul {
   font-weight: 100;
   font-size: medium;
 }
+
 /* about me pawprint styling */
 .paws {
   background-image: url("./images/pawprint.jpg");
@@ -278,12 +303,14 @@ footer ul {
   height: 150px;
   width: 100%;
 }
+
 /* about me */
 h2, p {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
 }
+
 p {
   font-size: 14px;
   font-weight: 400;
