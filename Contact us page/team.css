@@ -34,28 +34,36 @@ body {
   padding: 0;
   display: flex;
   align-items: center;
+ 
 }
-
+#nav-list {
+  list-style-type: none;
+}
 #nav-list li {
   margin-right: 40px;
 }
-
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+#nav-list li {
+  margin-right: 40px;
+}
 nav a {
 color: black;
-text-decoration: none; 
-transition: color 0.3s; 
+text-decoration: none;
+transition: color 0.3s;
 }
-
 nav a:hover {
-text-decoration: underline; 
+text-decoration: underline;
 }
-
 #search-container {
 display: flex;
 align-items: center;
 margin-left: auto;
 }
-
 #search-bar {
 width: 300px;
 height: 40px;
@@ -64,7 +72,6 @@ border: 1px solid #ccc;
 box-sizing: border-box;
 margin-left: 10px;
 }
-
 #search-button {
 height: 40px;
 border: 1px solid #ccc;
@@ -75,12 +82,11 @@ cursor: pointer;
 padding: 0 10px;
 box-sizing: border-box;
 }
-
 ul.navbar-nav {
 margin: 0;
 }
-
 body {
+
   margin: 50;
   padding: 50;
   min-height: 100vh;
@@ -88,19 +94,16 @@ body {
   font-family: "Aoboshi One", sans-serif;
 
 }
-
 .container {
   width: 1200px;
   min-height: 600px;
   display: flex;
   flex-wrap: wrap;
 }
-
 .card {
   position: relative;
   /* display: flex;
   flex-direction: column; */
-
   width: calc(50% - 20px);
   min-height: 280px;
   background: #fff;
@@ -112,15 +115,11 @@ body {
 /* display:flex;
 flex-direction: ; */
 }
-
-
 .card .profilephoto {
   position: absolute;
   width: 50%;
   height: 100%;
 }
-
-
 .card .profilephoto img {
   border-radius: 50px;
   position: absolute;
@@ -130,7 +129,6 @@ flex-direction: ; */
   height: 100%;
   object-fit: cover;
 }
-
 .card .details {
   position: absolute;
   right: 0;
@@ -141,12 +139,10 @@ flex-direction: ; */
   justify-content: center;
   align-items: center;
 }
-
 .card .details .content {
   padding: 20px;
   box-sizing: border-box;
 }
-
 .card .details .content h2 {
   margin: 0;
   padding: 0;
@@ -154,23 +150,19 @@ flex-direction: ; */
   line-height: 0.85em;
   font-weight: 600;
 }
-
 .card .details .content h2 span {
   font-size: 14px;
   color: #777;
 }
-
 .card .details .content ul {
   margin: 0;
   padding: 0;
   display: flex;
 }
-
 .card .details .content ul li {
   list-style: none;
   margin-left: 2px;
 }
-
 .card .details .content a {
   display: inline-block;
   text-decoration: none;
@@ -180,46 +172,37 @@ flex-direction: ; */
   color: #262626;
   font-weight: 500;
 }
-
 .card .details .content ul li a {
   color: #fff;
   border: none;
 }
-
 .card .details .content ul li:nth-child(1) a {
-  background: #3b5995;
+  background: #3B5995;
 }
-
 .card .details .content ul li:nth-child(2) a {
-  background: #55acee;
+  background: #55ACEE;
 }
-
 .card .details .content ul li:nth-child(3) a {
-  background: #b31217;
+  background: #B31217;
 }
-
 .card .details .content ul li:nth-child(4) a {
-  background: #0077b5;
+  background: #0077B5;
 }
-
 .card .details .content a:hover {
   background: #262626;
   color: #fff;
 }
-
 @media (max-width: 1200px) {
   .container {
     width: 100%;
   }
 }
-
 @media (max-width: 991px) {
   .card {
     width: calc(70% - 20px);
     margin: 10px auto;
   }
 }
-
 @media (max-width: 768px) {
   .card {
     width: calc(70% - 20px);
@@ -236,14 +219,12 @@ flex-direction: ; */
     height: 200px;
   }
 }
-
 @media (max-width: 480px) {
   .card {
     width: calc(100% - 40px);
     margin: 10px auto;
   }
 }
-
 .lastcard {
   position: relative;
   width: calc(50% - 20px);
@@ -261,13 +242,11 @@ flex-direction: ; */
   height: 278px;
   overflow: hidden;
 }
-
 .lastcard .profilevideo video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .paws-b {
   background-repeat: repeat-x;
   background-size: contain;
@@ -275,7 +254,6 @@ flex-direction: ; */
   width: 100%;
   opacity: 50%;
 }
-
 /* Style for the footer */
 footer {
   background-color: white;
@@ -283,17 +261,15 @@ footer {
   padding: 10px;
   text-align: center;
   width: 100%;
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: Arial, Helvetica, sans-serif;
   font-size: large;
   font-weight: bold;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
-
 body {
-  margin-bottom: 60px; 
+  margin-bottom: 60px;
 }
-
 /* Style for links in the footer */
 footer a {
   color: black;
@@ -311,11 +287,10 @@ footer ul {
   padding: 0;
   margin: 0;
 }
-
 /* Style for each list item in the footer */
 .footer-item {
   display: inline-block;
-  margin-right: 20px; 
+  margin-right: 20px;
   font-weight: 100;
   font-size: medium;
 }
@@ -331,7 +306,7 @@ footer ul {
 
 /* about me */
 h2, p {
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
 }
@@ -341,4 +316,3 @@ p {
   font-weight: 400;
   color: gray;
 }
-
